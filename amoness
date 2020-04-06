@@ -1,0 +1,443 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@1,700&family=Lalezar&display=swap" rel="stylesheet">  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<title>Document</title>
+<script>
+
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100 &&  document.getElementById("myNav").style.height != "100%") {
+    document.getElementById("myBtn").style.visibility="visible";
+  } else {
+    document.getElementById("myBtn").style.visibility="hidden";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+  function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+
+
+</script>
+        <style>
+              
+    body { 
+      background-color: rgb(122, 13, 99);
+    }
+    .navb{
+        background-color: #F8F9FA;
+        width: 100%;
+       padding: 0.7%;
+    }
+    .logonav{
+        position: sticky;
+    left:95%;
+    }
+    
+    
+#myBtn {
+  visibility: hidden;
+  position: fixed;
+  bottom: 6px;
+  right: 30px;
+  z-index: 99;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 15px;
+}
+
+#myBtn:hover {
+  border: 2px solid black !important;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  
+}
+
+
+
+    a:link{
+        text-decoration: none;
+    }
+    .btt{
+        visibility: hidden;
+    }
+    .tl{
+        width: 100px;; 
+        height:100px;
+    }
+    .tll{
+        width: 50px;; 
+        height:50px;
+    }
+    .tll:hover {
+    opacity: 0.7;
+}
+
+    * {box-sizing:border-box}
+
+  
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0, 0, 0, 0.89);
+  overflow-y: hidden;
+  transition: 1.8s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+ .padd{
+     padding: 3%;
+ }
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.rs{
+  position: relative;
+  top: 15%;
+  
+}
+
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+#sticky-footer {
+  flex-shrink: none;
+}
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+    @media (max-width: 900px) {
+  .btt {
+    visibility: visible;
+  }
+  .navb{
+        background-color: #F8F9FA;
+        width: 100%;
+    }
+  
+
+}
+
+@media (max-width: 700px) {
+ 
+    .tl{
+        width: 80px;
+        height:80px;
+    }
+   .tll{
+    width: 35px;
+        height:35px;
+   }
+   
+}
+    </style>
+    </head>
+    <body>
+       
+        <nav class="navb">
+
+
+          <div class="d-flex bd-highlight">
+
+            <div class="p-2 flex-fill bd-highlight">
+              <button class="btn btn-outline-primary rs fa fa-bars"  onclick="openNav()" style="font-size: xx-large;" onclick="openNav()"></button>
+            </div>
+            
+            <div class="p-2 flex-fill bd-highlight">
+              <a href="https://fb.me/AMON.333"  target="_blank"><img class="tll" src="facebook.png" alt="facebook"></a>
+                    <a href="#" target="_blank"><img class="tll" src="instagram.png" alt="instagram"></a>
+                    <a href="https://www.youtube.com/channel/UC7082oThUq4FUBlbsAEwUkg?view_as=subscriber" target="_blank"><img class="tll" src="youtube.png" alt="youtube"></a>
+                    <a href="tel:0648597458"><img class="tll" src="whatsapp.png" alt="whatsapp"></a>
+            </div>
+              <a class="logonav" href="#"><img class="tl" src="essdd.jpg" alt="amon"></a>
+          </div>
+
+<!--le menu-->
+                <div id="myNav" class="overlay">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                     <div class="overlay-content">
+                           <a href="#">خربشات</a>
+                           <a href="#" >سلسلات امون</a>
+                           <a href="#" >مخاترات</a>
+                           <a href="#" > ! تواصل مع امون </a>
+                      </div>
+              </div>  
+
+
+        </nav>
+         
+<br>
+<button onclick="topFunction()" class="btn btn-danger rounded-circle border border-light" id="myBtn" title="Go to top">Top</button>
+
+<!--le debut du body-->
+
+<div class="card-columns padd">
+
+
+    <div class="card border-warning">
+        <img src="img_mountains_wide.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title that wraps to a new line</h5>
+        <p class="card-text">This is a longer card with supporting  longer card with suppor  longer card with suppor text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    </div>
+
+
+      <div class="card bg-danger border-light text-white text-center p-3">
+        <blockquote class="blockquote mb-0">
+          <p style="font-family: 'Lateef', cursive;">أثبتت الأيام أن الأنبياء المسلحين احتلوا وانتصروا، بينما فشل الأنبياء غير المسلحين عن ذلك</p>
+          <footer class="blockquote-footer text-white">
+            <small>
+              ميكافيللي
+            </small>
+          </footer>
+        </blockquote>
+      </div>
+
+      <div class="card border-warning">
+        <img src="img_mountains_wide.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title that wraps to a new line</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+
+    <div class="card bg-dark border-warning text-white text-center p-3">
+      <blockquote class="blockquote mb-0">
+        <p style="font-family: 'Lateef', cursive;">لم أخشى من شخص تدرب على ألف ركلة , لكني أخشى من شخص تدرب على ركلة واحدة ألف مرة</p>
+        <footer class="blockquote-footer text-white">
+          <small>
+            بروس لي
+          </small>
+        </footer>
+      </blockquote>
+    </div>
+
+
+     <div class="card border-warning">
+        <img src="img_mountains_wide.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title that wraps to a new line</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+</div>
+
+
+<div class="card bg-success border-light text-white text-center p-3">
+    <blockquote class="blockquote mb-0">
+      <p style="font-family: 'Lateef', cursive;">تعملت منذ زمن ألا أتصارع مع خنزير أبداً ... لأنني سأتسـخ أولاً ، و لأنه سيسعد بذلك </p>
+      <footer class="blockquote-footer text-white">
+        <small>
+          جورج برناردشو
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+
+  <div class="card border-warning">
+    <img src="img_mountains_wide.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title that wraps to a new line</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card bg-warning border-light text-white text-center p-3">
+    <blockquote class="blockquote mb-0">
+      <p style="font-family: 'Lateef', cursive;">لا تترك الحق ، لأنك متى تركت الحق فإنك لا تتركه إلا إلى الباطل</p>
+      <footer class="blockquote-footer text-white">
+        <small>
+          ارسطو
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+
+
+  
+  <div class="card border-warning">
+    <img src="img_mountains_wide.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title that wraps to a new line</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+      
+  <div class="card bg-secondary border-light text-white text-center p-3">
+    <blockquote class="blockquote mb-0">
+      <p style="font-family: 'Lateef', cursive;">اذا لم يكن لديك هدف ، فاجعل هدفك الاول ايجاد واحد</p>
+      <footer class="blockquote-footer text-white">
+        <small>
+          وليام شكسبير
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+ 
+
+
+  <div class="card bg-info border-light text-white text-center p-3">
+    <blockquote class="blockquote mb-0">
+      <p style="font-family: 'Lateef', cursive;">كيف نأخذ أقوال الماضي على أنها حقائق ! فحتى الشخص الأقل تعليما بيننا اليوم يعرف ببساطة أشياء معينة أكثر مما عرف أي شخص قبل ألفي عام </p>
+      <footer class="blockquote-footer text-white">
+        <small>
+          سام هاريس
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+
+
+  <div class="card border-warning">
+    <img src="img_mountains_wide.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title that wraps to a new line</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card bg-danger border-light text-light text-center p-3">
+    <blockquote class="blockquote mb-0">
+      <p style="font-family: 'Lateef', cursive;">عندما تقف بعوضة على خصيتيك ، حينها فقط ستدرك أن هناك طريقة لحل المشكلات دون عنف</p>
+      <footer class="blockquote-footer text-light">
+        <small>
+          كونفوشيوس
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+
+  <div class="card border-warning">
+    <img src="img_mountains_wide.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title that wraps to a new line</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card bg-dark border-warning text-white text-center p-3">
+    <blockquote class="blockquote mb-0">
+      <p style="font-family: 'Lateef', cursive;">مُهمة شاقة أن تُحب شخص ما ؛ عليك أن تملك الطاقة ، وأن تتصف بالكرم و العمى أحياناً ، فهُناك أيضًا لحظة عليك فيها القفز بدون تفكير من علوٍ شاهق ، لن تفعلها لو فكرت كثيراً</p>
+      <footer class="blockquote-footer text-white">
+        <small>
+          جان بول سارتر
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+  
+  <div class="card border-warning">
+    <img src="img_mountains_wide.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title that wraps to a new line</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  
+
+ 
+  
+      </div>
+
+
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="Amon2.html">2</a></li>
+          <li class="page-item"><a class="page-link" href="Amon3.html">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="Amon2.html">Next</a>
+          </li>
+        </ul>
+      </nav>
+
+<!--la fin du body-->
+
+
+  <br><br>
+  <footer id="sticky-footer" class="py-4 bg-danger text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; Amon</small>
+    </div>
+  </footer>
+
+
+
+    </body>
+</html>
